@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="cityWeather"
+            type="com.exomind.task.models.CityWeatherUiModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        app:cardBackgroundColor="@color/grey_cardview"
+        app:cardCornerRadius="@dimen/dimen_20dp"
+        app:cardElevation="@dimen/dimen_1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/margin_default">
+
+            <com.exomind.task.view.CircleImageView
+                android:id="@+id/ivCloudsIcon"
+                android:layout_width="@dimen/dimen_45dp"
+                android:layout_height="@dimen/dimen_45dp"
+                android:src="@{cityWeather.main.equals(@string/sun_txt)? @drawable/ic_sun :   @drawable/ic_clouds }"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvCityName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="@dimen/md_margin_padding_size_small"
+                android:lines="1"
+                android:text="@{cityWeather.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_17sp"
+                app:layout_constraintStart_toEndOf="@+id/ivCloudsIcon"
+                app:layout_constraintBaseline_toBaselineOf="@id/ivCloudsIcon"
+                app:textFont="bold"
+                android:fontFamily="@font/gilroy_semibold"
+                tools:text="Category Name" />
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_repo_desc_margin"
+                android:maxLines="2"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@{String.format(@string/item_weather_values_text, cityWeather.main.temp.toString())}"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/md_text_size_small"
+                app:layout_constraintStart_toStartOf="@+id/tvCityName"
+                app:layout_constraintTop_toBottomOf="@id/tvCityName"
+                tools:text="19 °C" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
