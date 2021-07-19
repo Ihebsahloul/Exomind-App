@@ -106,7 +106,7 @@
         android:fontFamily="@font/gilroy_semibold"
         android:textAllCaps="false"
         android:visibility="gone"
-        android:textSize="@dimen/dimen_16dp"
+        android:textSize="@dimen/dimen_16sp"
         app:rippleColor="@color/white"
         android:text="@string/action_retry" />
     </LinearLayout>
@@ -141,7 +141,7 @@
         <include
             android:id="@+id/layoutError"
             android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_height="@dimen/dimen_450dp"
             layout="@layout/layout_error_status_notifier"
             android:visibility="gone" />
 

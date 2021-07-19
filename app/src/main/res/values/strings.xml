@@ -27,11 +27,11 @@
 
     <!--Common Info-->
     <string name="info_again_exit">Press again to exit</string>
-    <string name="info_gamification_message">Don\'t worry, it\'s not you - it\'s us. Sorry about that.</string>
+    <string name="info_gamification_message">Ne vous inquiétez pas, ce n\'est pas vous, c\'est nous. Désolé pour ça.</string>
 
     <!--Common Errors-->
     <string name="error_no_browser">You don\'t have any browser to open web page</string>
-    <string name="error_something_went_wrong">Something went wrong..</string>
+    <string name="error_something_went_wrong">Une erreur s\'est produite</string>
     <string name="error_offline_test_scenario">Disable data connection to see offline behaviour</string>
 
     <!--Common Actions-->

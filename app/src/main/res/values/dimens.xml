@@ -293,6 +293,7 @@
     <dimen name="dimen_190dp">190dp</dimen>
     <dimen name="dimen_42dp">42dp</dimen>
     <dimen name="dimen_170dp">170dp</dimen>
+    <dimen name="dimen_450dp">450dp</dimen>
 
 
 </resources>
