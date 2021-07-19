@@ -27,7 +27,7 @@
 
 
         <ImageView
-            android:id="@+id/back_ImageView_aboutus"
+            android:id="@+id/back_ImageView_weather"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -86,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/subtitle_weather_text"
-        android:textColor="@color/grey"
+        android:textColor="@color/text_color"
         android:textSize="@dimen/dimen_15sp"
         android:layout_marginEnd="@dimen/dimen_20dp"
         android:paddingStart="@dimen/dimen_20dp"
@@ -146,6 +146,7 @@
         android:layout_marginTop="@dimen/dimen_20dp"
         android:fontFamily="@font/gilroy_semibold"
         android:lines="2"
+        android:text="@string/first_msg"
         android:textColor="@color/text_color"
         android:textSize="@dimen/dimen_15sp"
         android:textAlignment="center"

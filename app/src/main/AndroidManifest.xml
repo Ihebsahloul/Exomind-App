@@ -28,6 +28,7 @@
             android:name=".weather.WeatherActivity"
             android:configChanges="orientation|screenSize|locale|uiMode"
             android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
             android:theme="@style/AppTheme" />
 
     </application>

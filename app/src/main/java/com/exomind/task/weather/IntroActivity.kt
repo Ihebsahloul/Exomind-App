@@ -38,7 +38,7 @@ import kotlin.collections.ArrayList
 class IntroActivity : BaseActivity() {
 
 
-
+    private var mBackPressed: Long = 0
 
 
     @InternalCoroutinesApi
@@ -51,8 +51,6 @@ class IntroActivity : BaseActivity() {
 
 
     override fun getLayoutId() = R.layout.activity_intro
-
-
 
 
     @InternalCoroutinesApi
@@ -68,12 +66,12 @@ class IntroActivity : BaseActivity() {
     }
 
 
-
-
-
-
-
     override fun onBackPressed() {
-        super.onBackPressed()
+        if (mBackPressed + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed()
+        } else {
+            toast(getString(R.string.info_again_exit))
+        }
+        mBackPressed = System.currentTimeMillis()
     }
 }

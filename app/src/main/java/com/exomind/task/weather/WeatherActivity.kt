@@ -40,6 +40,10 @@ class WeatherActivity : BaseActivity() {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
+
+    @InternalCoroutinesApi
+    private lateinit var cityWeatherResultAdapter: CityWeatherResultAdapter
+
     val WeatherViewModel: WeatherViewModel by viewModels { viewModelFactory }
     var progressStatus = 0
     var i = 0
@@ -47,8 +51,6 @@ class WeatherActivity : BaseActivity() {
     private val messagesList= ArrayList<String>()
     private  val cityWeahtersList = ArrayList<CityWeatherUiModel>()
 
-    @InternalCoroutinesApi
-    private lateinit var cityWeatherResultAdapter: CityWeatherResultAdapter
 
 
 
@@ -60,7 +62,6 @@ class WeatherActivity : BaseActivity() {
         messagesList?.add(getString(R.string.first_msg))
         messagesList?.add(getString(R.string.second_msg))
         messagesList?.add(getString(R.string.third_msg))
-
         startTempProgress(temp_prgoress_bar, MAX_TIME_TIMER)
         observeUiState()
         observeSearchResults()
@@ -82,37 +83,9 @@ class WeatherActivity : BaseActivity() {
         mCountDownTimer = object : CountDownTimer(maxTime.toLong(), TICK_TIME) {
             override fun onTick(millisUntilFinished: Long) {
 
-                i++
-                pb.setProgress(i as Int * 100 / (maxTime / TICK_TIME.toInt()))
-                val progressText = (i as Int * 100 / (maxTime / TICK_TIME)).toString()
-                loading_tv.setText("$progressText %")
+                fetchCitiesWeather(pb, maxTime)
 
-                if ( i == Constants.TIMEFRAMES.RENNES)
-                {
-                    fetchCityWeather(Constants.CITIES.RENNES)
-                }
-                if ( i == Constants.TIMEFRAMES.PARIS)
-                {
-                    fetchCityWeather(Constants.CITIES.PARIS)
-                }
-                if ( i == Constants.TIMEFRAMES.NANTES)
-                {
-                    fetchCityWeather(Constants.CITIES.NANTES)
-                }
-                if ( i == Constants.TIMEFRAMES.BORDEAUX)
-                {
-                    fetchCityWeather(Constants.CITIES.BORDEAUX)
-                }
-                if ( i == Constants.TIMEFRAMES.LYON)
-                {
-                    fetchCityWeather(Constants.CITIES.LYON)
-                }
-
-                if( i%6 == 0)
-                    {
-
-                        anyItem()
-                    }
+                displayLoadingMsgs()
 
 
             }
@@ -123,25 +96,61 @@ class WeatherActivity : BaseActivity() {
                 loading_msgs_tv.hide()
                 loading_tv.hide()
 
-                if (!cityWeahtersList.isNullOrEmpty()) {
-                    if (layoutError.isVisible) {
-                        layoutError.hide()
-                    }
-                    start_progress_btn.show()
-                    rvCities.show()
-
-                    cityWeatherResultAdapter = CityWeatherResultAdapter(cityWeahtersList)
-                    rvCities.apply {
-                        adapter =
-                            ScaleInAnimationAdapter(cityWeatherResultAdapter.apply { cityWeahtersList })
-                         initRecyclerViewWithLineDecoration(this@WeatherActivity)
-                    }
-                } else
-
-                    displayNoSearchResults()
+                displayCitiesList()
             }
         }
         mCountDownTimer.start()
+    }
+
+    @InternalCoroutinesApi
+    private fun WeatherActivity.displayCitiesList() {
+        if (!cityWeahtersList.isNullOrEmpty()) {
+            if (layoutError.isVisible) {
+                layoutError.hide()
+            }
+            start_progress_btn.show()
+            rvCities.show()
+
+            cityWeatherResultAdapter = CityWeatherResultAdapter(cityWeahtersList)
+            rvCities.apply {
+                adapter =
+                        ScaleInAnimationAdapter(cityWeatherResultAdapter.apply { cityWeahtersList })
+                initRecyclerViewWithLineDecoration(this@WeatherActivity)
+            }
+        } else
+
+            displayNoSearchResults()
+    }
+
+    private fun displayLoadingMsgs() {
+        if (i % 6 == 0) {
+
+            anyItem()
+        }
+    }
+
+    @InternalCoroutinesApi
+    private fun WeatherActivity.fetchCitiesWeather(pb: ProgressBar, maxTime: Int) {
+        i++
+        pb.setProgress(i as Int * 100 / (maxTime / TICK_TIME.toInt()))
+        val progressText = (i as Int * 100 / (maxTime / TICK_TIME)).toString()
+        loading_tv.setText("$progressText %")
+
+        if (i == Constants.TIMEFRAMES.RENNES) {
+            fetchCityWeather(Constants.CITIES.RENNES)
+        }
+        if (i == Constants.TIMEFRAMES.PARIS) {
+            fetchCityWeather(Constants.CITIES.PARIS)
+        }
+        if (i == Constants.TIMEFRAMES.NANTES) {
+            fetchCityWeather(Constants.CITIES.NANTES)
+        }
+        if (i == Constants.TIMEFRAMES.BORDEAUX) {
+            fetchCityWeather(Constants.CITIES.BORDEAUX)
+        }
+        if (i == Constants.TIMEFRAMES.LYON) {
+            fetchCityWeather(Constants.CITIES.LYON)
+        }
     }
 
 
@@ -182,6 +191,12 @@ class WeatherActivity : BaseActivity() {
 
             startTempProgress(temp_prgoress_bar,MAX_TIME_TIMER)
         }
+
+        back_ImageView_weather.setOnClickListener {
+
+            onBackPressed()
+        }
+
 
     }
 
