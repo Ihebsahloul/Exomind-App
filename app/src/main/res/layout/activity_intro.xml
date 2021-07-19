@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_bg6"
+        android:padding="@dimen/dimen_25dp">
+
+
+        <com.exomind.task.view.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_100dp"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:src="@mipmap/exomind_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="start"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:text="@string/intro_title_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_22sp"
+            app:layout_constraintBottom_toTopOf="@+id/desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_45dp"
+            android:layout_marginBottom="@dimen/dimen_25dp"
+            android:fontFamily="@font/googlesans_medium"
+            android:gravity="start"
+            android:text="@string/intro_subtitle_text"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/weatherButton"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/dimen_50dp"
+            android:maxHeight="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:background="@drawable/button_background_red"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gilroy_semibold"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/start_text" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

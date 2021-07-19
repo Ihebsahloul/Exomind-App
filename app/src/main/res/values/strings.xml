@@ -62,4 +62,9 @@
     <string name="category_text">Catégorie</string>
     <string name="pourcent">Pourcentage</string>
     <string name="weather_title">Météo</string>
+    <string name="subtitle_weather_text">Conditions météo dans les métropoles</string>
+    <string name="title_weather_text">Météo France</string>
+    <string name="intro_title_text">Bienvenue au cas pratique Android Exomind</string>
+    <string name="intro_subtitle_text">Appuyer sur ce bouton pour commencer</string>
+    <string name="start_text">Commencer</string>
 </resources>

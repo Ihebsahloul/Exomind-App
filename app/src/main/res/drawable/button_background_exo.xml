@@ -4,7 +4,7 @@
         android:radius="10dp" />
 
     <solid
-        android:color="@color/exo_color"/>
+        android:color="@color/exo_light_color"/>
 
     <padding
         android:left="5dp"

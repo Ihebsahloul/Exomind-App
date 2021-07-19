@@ -16,7 +16,7 @@
             android:theme="@style/AppTheme"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
-            android:name=".weather.WeatherActivity">
+            android:name=".weather.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +24,12 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".weather.WeatherActivity"
+            android:configChanges="orientation|screenSize|locale|uiMode"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
     </application>
 
 </manifest>

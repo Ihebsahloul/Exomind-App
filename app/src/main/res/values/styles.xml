@@ -6,7 +6,6 @@
         <item name="colorPrimaryVariant">@color/primaryTextColor</item>
         <item name="colorPrimaryDark">@color/white</item>
         <item name="colorAccent">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
         <item name="android:colorBackground">@color/white</item>
 
 
@@ -26,7 +25,6 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/bottomNavigationSelectedColor</item>
         <item name="colorPrimaryDark">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
         <item name="colorAccent">@color/bottomNavigationSelectedColor</item>
     </style>
 </resources>
