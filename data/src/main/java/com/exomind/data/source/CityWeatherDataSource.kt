@@ -21,7 +21,7 @@ class CityWeatherDataSource @Inject constructor(
      */
     suspend fun getCityWeather(city: String) : Flow<WeatherResponseEntity> {
 
-        val cityWeatherResponse = apiService.getCityWeather(city,Constants.METRIC,Constants.BASE_URL)
+        val cityWeatherResponse = apiService.getCityWeather(city,Constants.METRIC,Constants.API_KEY)
         val callData = cityWeatherResponse
 
 

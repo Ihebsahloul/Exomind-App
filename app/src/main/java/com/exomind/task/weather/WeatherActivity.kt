@@ -91,19 +91,19 @@ class WeatherActivity : BaseActivity() {
                 {
                     fetchCityWeather(Constants.CITIES.RENNES)
                 }
-                if ( i == Constants.TIMEFRAMES.RENNES)
+                if ( i == Constants.TIMEFRAMES.PARIS)
                 {
                     fetchCityWeather(Constants.CITIES.PARIS)
                 }
-                if ( i == Constants.TIMEFRAMES.RENNES)
+                if ( i == Constants.TIMEFRAMES.NANTES)
                 {
                     fetchCityWeather(Constants.CITIES.NANTES)
                 }
-                if ( i == Constants.TIMEFRAMES.RENNES)
+                if ( i == Constants.TIMEFRAMES.BORDEAUX)
                 {
                     fetchCityWeather(Constants.CITIES.BORDEAUX)
                 }
-                if ( i == Constants.TIMEFRAMES.RENNES)
+                if ( i == Constants.TIMEFRAMES.LYON)
                 {
                     fetchCityWeather(Constants.CITIES.LYON)
                 }
