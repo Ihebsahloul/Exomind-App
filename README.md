@@ -1,7 +1,6 @@
-# Bankin App Demo 
+# Exomind App Demo 
 
-An Android app consuming [Banking App API](https://raw.githubusercontent.com/bankin-engineering/challenge-android/master/categories.json) to display the expenses categories and sub categories
-of theb Bankin' Application. It has been built using kotlin with clean architecture principles, Repository Pattern and MVVM
+An Android app consuming [Exomind App API](https://openweathermap.org/current) to establish a 60 minutes timer and fetch 5 French Citites weather conditions and disply results in a list. It has been built using kotlin with clean architecture principles, Repository Pattern and MVVM
 pattern as well as Architecture Components.
 
 Min API Level Supported : 19
@@ -9,8 +8,8 @@ Min API Level Supported : 19
 
 ## Development Environment
 
-    Android Studio 4.1.1
-    macOS BigSur 11.0
+    Android Studio 4.1.2
+    macOS BigSur 11.1
 
 ## Table of Contents
 
@@ -18,7 +17,6 @@ Min API Level Supported : 19
 - [Features](#features)
 - [Libraries](#libraries)
 - [Extras](#extras)
-- [Screenshots](#screenshots)
 
 ## Architecture
 
@@ -30,15 +28,17 @@ The Application is split into a three layer architecture in order to provide cle
 
 ## Features
  
- - Bankin' categories Listing
- - Cagtegories sorting by Value and name
- - Pull to refresh category
- - Offline Storage ( Scheduled repo remote controller syncing, App will sync with backend server in every 2hrs )
+ - Intro Screen 
+ - Handling a determinate progress bar 
+ - Handling API errors
+ - Dealing with progress status, loading messages etc...
+ - Cities weather condtions Listing
+
  
  ## Testing
 
- - `app/test/ - Unit tests` - test -> Right click on package name(com.bankin.task) -> Run Test In 'com.bankin.task'
- - `app/androidTest/ - Instrumentation tests` - androidTest -> Right click on package name(com.bankin.task) -> Run Test In 'com.bankin.task'
+ - `app/test/ - Unit tests` - test -> Right click on package name(com.exomind.task) -> Run Test In 'com.exomind.task'
+ - `app/androidTest/ - Instrumentation tests` - androidTest -> Right click on package name(com.exomind.task) -> Run Test In 'com.exomind.task'
 
 ## Libraries
 
@@ -66,30 +66,18 @@ Following are the Libraries used:
 
 #### Resource Values
 
-- Fonts
+- Fonts (Gilroy & Google Sans)
 - Dimension & String Values
 - Themes & Styles
 - Network Config
 
-## Screenshots
 
-
-##
-
-- App Screens
-
-<p float="center">
-  <img src="media/categorieslist.png" title="Categories Loading" width="285" />
-  <img src="media/subcategorieslist.png" title="Sub Categories List" width="285" /> 
-  <img src="media/sortingaction.png" title="Categories Sort" width="285" />
-  <img src="media/errorlayout.png" title="Error Retry" width="285" />
-</p>
 
 
 ## License
 
  ```
-   Copyright 2020 Iheb SAHLOUL
+   Copyright 2021 Iheb SAHLOUL
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
