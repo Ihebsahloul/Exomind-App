@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">ExoMind App</string>
+    <string name="sub_categories_title">Sous Catégories</string>
+    <string name="stootie_text">Stootie</string>
+    <string name="search_text">Search</string>
+    <string name="search_hint">Search a country …</string>
+    <string name="text_name_test">About United States of America</string>
+    <string name="test_region_text">America</string>
+    <string name="capital_title">Capital</string>
+    <string name="continent_title">Continent</string>
+    <string name="population_title">Population</string>
+    <string name="area_title">Area</string>
+    <string name="language_title">Language</string>
+    <string name="currency_title">Currency</string>
+    <string name="call_code_title">Call Code</string>
+    <string name="error_text">An error occurred, please try again.</string>
+    <string name="example_numeric_text">1.</string>
+
+    <!--Fonts-->
+    <string name="roboto_thin" translatable="false">googlesans_thin</string>
+    <string name="roboto_light" translatable="false">googlesans_light</string>
+    <string name="roboto_regular" translatable="false">googlesans_regular</string>
+    <string name="roboto_medium" translatable="false">googlesans_medium</string>
+    <string name="roboto_bold" translatable="false">googlesans_bold</string>
+    <string name="roboto_regular_italic" translatable="false">googlesans_italic</string>
+    <string name="roboto_medium_italic" translatable="false">googlesans_medium_italic</string>
+
+    <!--Common Info-->
+    <string name="info_again_exit">Press again to exit</string>
+    <string name="info_gamification_message">Don\'t worry, it\'s not you - it\'s us. Sorry about that.</string>
+
+    <!--Common Errors-->
+    <string name="error_no_browser">You don\'t have any browser to open web page</string>
+    <string name="error_something_went_wrong">Something went wrong..</string>
+    <string name="error_offline_test_scenario">Disable data connection to see offline behaviour</string>
+
+    <!--Common Actions-->
+    <string name="action_retry">Recommencer</string>
+
+    <!-- Trending Repo Search -->
+    <string name="label_sort_by_stars">Sort by values</string>
+    <string name="label_sort_by_name">Sort by name</string>
+    <string name="label_sorted_by_value">Sorted by category stars</string>
+    <string name="label_sorted_repo_name">Sorted by category name</string>
+    <string name="title_bankin">ExoMind\'</string>
+    <string name="item_weather_values_text">%1$s °C</string>
+    <string name="clouds_txt">Clouds</string>
+    <string name="sun_txt">Clear</string>
+    <string name="progress_text">%1$s %</string>
+    <string name="first_msg"> Nous téléchargeons les données…</string>
+    <string name="second_msg">C\’est presque fini…</string>
+    <string name="third_msg">Plus que quelques secondes avant d\’avoir le résultat…</string>
+    <!--  Data Binding String Templates-->
+    <string name="content_desc_avatar">Avatar</string>
+    <string name="label_no_times">No Items Found</string>
+    <string name="label_unknown">Unknown</string>
+    <string name="exomind_text">Exomind\'</string>
+    <string name="content_cateogry_description">Content cateogry description</string>
+    <string name="sub_category_text">Sous catégorie</string>
+    <string name="sub_category_name">Sous Catégorie</string>
+    <string name="category_txt">category</string>
+    <string name="category_text">Catégorie</string>
+    <string name="pourcent">Pourcentage</string>
+    <string name="weather_title">Météo</string>
+</resources>
