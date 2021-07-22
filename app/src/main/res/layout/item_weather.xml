@@ -33,7 +33,7 @@
                 android:id="@+id/ivCloudsIcon"
                 android:layout_width="@dimen/dimen_45dp"
                 android:layout_height="@dimen/dimen_45dp"
-                android:src="@{cityWeather.main.equals(@string/sun_txt)? @drawable/ic_sun :   @drawable/ic_clouds }"
+                android:src="@{cityWeather.weather.get(0).main.equals(@string/sun_txt)? @drawable/ic_sun :   @drawable/ic_clouds }"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
